@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- "stable"
+
+services:
+- mongodb
+- redis-server
+
+script:
+- "npm run test-ci"
+
+after_script: "npm install coveralls && npm audit fix && cat ./coverage/lcov.info | coveralls"

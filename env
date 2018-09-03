@@ -1,0 +1,45 @@
+// mongodb conf
+DB_USER=
+DB_PASS=
+DB_HOST=localhost
+DB_NAME=
+DB_PORT=27017
+
+
+// gmail server smtp
+SMTP_USER=
+SMTP_PASS=
+
+
+// google oauth
+OA_CLIENT_ID=1
+OA_CLIENT_SECRET=1
+OA_CALLBACK=1
+
+
+// project production or develope mode `dev` or `pro`
+PD_FLAG=dev
+
+
+// project secret key
+SECRET_KEY=
+
+
+// session redis #1
+REDIS_SES_HOST=
+REDIS_SES_PORT=6379
+
+
+// cache redis #2
+REDIS_CACHE_HOST=
+REDIS_CACHE_PORT=6379
+
+
+
+// raven
+RAVEN_NAME=
+RAVEN_KEY=
+
+
+// socket io usability            default = 0 non use         = 1  use docket io on same port
+SOCKET_USE=0

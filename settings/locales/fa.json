@@ -1,0 +1,13 @@
+{
+	"settings imported": "تنظیمات اضافه شدند",
+	"database connected": "دیتابیس وصل شد",
+	"database cant connect": "مشکل در اتصال دیتابیس",
+	"hey money": "سلام پول",
+	"Server Error": "خطا در سرور",
+	"Email or Password wrong": "ایمیل یا گذرواژه شما اشتباه است",
+	"This email already token": "این ایمیل قبلا گرفته شده است",
+	"Register successfully": "ثبت نام موفقیت آمیز",
+	"Not Found": "سندی پیدا نشد",
+	"Input is not in right format": "Input is not in right format",
+	"Unauthorized request": "Unauthorized request"
+}

@@ -1,0 +1,19 @@
+{
+	"settings imported": "settings imported",
+	"database connected": "database connected",
+	"database cant connect": "database cant connect",
+	"hey money": "hey money",
+	"Project load in dev mode, not use this mode for production mode": "Project load in dev mode, not use this mode for production mode",
+	"Error in DB_FLAG not found or have incorrect value, must be `pro` or `dev` fix it in .env file": "Error in DB_FLAG not found or have incorrect value, must be `pro` or `dev` fix it in .env file",
+	"Secret key must be defined in .env and have more than 6 length": "Secret key must be defined in .env and have more than 6 length",
+	"Error in redis connection, or in flash": "Error in redis connection, or in flash",
+	"Error in redis connection": "Error in redis connection",
+	"Server Error": "Server Error",
+	"Email or Password wrong": "Email or Password wrong",
+	"This email already token": "This email already token",
+	"Register successfully": "Register successfully",
+	"DB_NAME value in .env file is empty": "DB_NAME value in .env file is empty",
+	"Not Found": "Not Found",
+	"Input is not in right format": "Input is not in right format",
+	"Unauthorized request": "Unauthorized request"
+}
