@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7c0718c-492c-4832-9400-5faa87d0e0c6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/common/api/v10/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/common/api/v10/views.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/user/api/v10/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/user/api/v10/views.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/api/v10/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/api/v10/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/common/api/v10/views.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/api/v10/views.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/messages.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/common/models.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/common/models.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/jwt_middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/jwt_middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/obtain_token.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/obtain_token.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/passport.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings/urls.js" beforeDir="false" afterPath="$PROJECT_DIR$/settings/urls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/locales/en.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -188,23 +183,24 @@
     <session id="1149287499">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="42" />
-          <entry key="html" value="2" />
-          <entry key="js" value="2888" />
+          <entry key="html" value="23" />
+          <entry key="js" value="5270" />
           <entry key="md" value="459" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="2" />
-          <entry key="JavaScript" value="2888" />
+          <entry key="HTML" value="23" />
+          <entry key="JavaScript" value="5270" />
           <entry key="Markdown" value="459" />
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
@@ -213,17 +209,20 @@
         <counts>
           <entry key="env" value="3" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="19" />
-          <entry key="js" value="31" />
+          <entry key="html" value="20" />
+          <entry key="jpg" value="10" />
+          <entry key="js" value="35" />
           <entry key="md" value="1" />
+          <entry key="png" value="1" />
           <entry key="pug" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="19" />
+          <entry key="HTML" value="20" />
+          <entry key="Image" value="11" />
           <entry key="Jade" value="1" />
-          <entry key="JavaScript" value="31" />
+          <entry key="JavaScript" value="35" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="4" />
         </counts>
@@ -232,29 +231,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/api/v10/routes.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/common/api/v10/views.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/common/messages.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="461">
+              <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
             </state>
           </provider>
         </entry>
@@ -262,8 +243,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/common/models.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            <state relative-caret-position="420">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -345,7 +326,6 @@
         <option value="$PROJECT_DIR$/app/common/test.js" />
         <option value="$PROJECT_DIR$/app/user/test.js" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/assets/templates/common/index.html" />
         <option value="$PROJECT_DIR$/app/common/routes.js" />
         <option value="$PROJECT_DIR$/assets/templates/common/blog.html" />
         <option value="$PROJECT_DIR$/assets/templates/common/checkout.html" />
@@ -355,7 +335,6 @@
         <option value="$PROJECT_DIR$/assets/templates/common/single-blog.html" />
         <option value="$PROJECT_DIR$/assets/templates/common/single-product-details.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/app/common/api/v10/routes.js" />
         <option value="$PROJECT_DIR$/settings/urls.js" />
         <option value="$PROJECT_DIR$/app/user/api/v10/routes.js" />
         <option value="$PROJECT_DIR$/app/user/api/v10/views.js" />
@@ -363,8 +342,10 @@
         <option value="$PROJECT_DIR$/lib/passport.js" />
         <option value="$PROJECT_DIR$/lib/jwt_middleware.js" />
         <option value="$PROJECT_DIR$/lib/obtain_token.js" />
-        <option value="$PROJECT_DIR$/app/common/models.js" />
+        <option value="$PROJECT_DIR$/app/common/api/v10/routes.js" />
+        <option value="$PROJECT_DIR$/assets/templates/common/index.html" />
         <option value="$PROJECT_DIR$/app/common/messages.js" />
+        <option value="$PROJECT_DIR$/app/common/models.js" />
         <option value="$PROJECT_DIR$/app/common/api/v10/views.js" />
       </list>
     </option>
@@ -422,17 +403,20 @@
             <path>
               <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="v10" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-commerce" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
+              <item name="private" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="e-commerce" type="b2602c69:ProjectViewProjectNode" />
@@ -547,16 +531,16 @@
       <workItem from="1535627951963" duration="1699000" />
       <workItem from="1535877328776" duration="7261000" />
       <workItem from="1535989739181" duration="2381000" />
-      <workItem from="1536039344449" duration="13917000" />
+      <workItem from="1536039344449" duration="14551000" />
+      <workItem from="1536080587298" duration="6888000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126824000" />
+    <option name="totallyTimeSpent" value="134346000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.113336846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -602,15 +586,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/lib/jwt_middleware.js</url>
-          <line>17</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/lib/obtain_token.js</url>
           <line>44</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -619,124 +596,53 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>decoded</expression-string>
+        <expression-string>images</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new Date().getTime()</expression-string>
+        <expression-string>image_name</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new Date().getDate()</expression-string>
+        <expression-string>res_category.title</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new Date().getSeconds()</expression-string>
+        <expression-string>res_category</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new Date()</expression-string>
+        <expression-string>category</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>user.local</expression-string>
+        <expression-string>product.info.category</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>user.local.email</expression-string>
+        <expression-string>params.consumer</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>user.info.username</expression-string>
+        <expression-string>mongoose.Types.ObjectId.isValid('lvj')</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>user.info</expression-string>
+        <expression-string>mongoose.Types.ObjectId.isValid('lvjn')</expression-string>
         <language-id>JavaScript</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/http/request.js" />
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/http_server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/maile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/patty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" lean-forward="true" selection-start-column="3" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/i18.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings/test.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -829,12 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#21788#21794#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -842,12 +742,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
-          <folding>
-            <element signature="e#2133#2138#0" expanded="true" />
-            <element signature="e#2375#2380#0" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#24805#24811#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -855,11 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="82" column="66" selection-start-line="82" selection-start-column="66" selection-end-line="82" selection-end-column="66" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="e#14400#14406#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -867,11 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="e#15829#15835#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -879,30 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11623#11628#0" expanded="true" />
-            <element signature="e#11713#11718#0" expanded="true" />
-            <element signature="e#11875#11880#0" expanded="true" />
-            <element signature="e#11967#11972#0" expanded="true" />
-            <element signature="e#12059#12064#0" expanded="true" />
-            <element signature="e#12227#12232#0" expanded="true" />
-            <element signature="e#12937#12942#0" expanded="true" />
-            <element signature="e#13027#13032#0" expanded="true" />
-            <element signature="e#13189#13194#0" expanded="true" />
-            <element signature="e#13281#13286#0" expanded="true" />
-            <element signature="e#13373#13378#0" expanded="true" />
-            <element signature="e#13541#13546#0" expanded="true" />
-            <element signature="e#14269#14274#0" expanded="true" />
-            <element signature="e#14359#14364#0" expanded="true" />
-            <element signature="e#14521#14526#0" expanded="true" />
-            <element signature="e#14613#14618#0" expanded="true" />
-            <element signature="e#14705#14710#0" expanded="true" />
-            <element signature="e#14873#14878#0" expanded="true" />
-            <element signature="e#43772#43778#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -910,11 +770,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="195" column="42" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="e#17192#17198#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -922,27 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="217" column="30" selection-start-line="217" selection-start-column="25" selection-end-line="217" selection-end-column="30" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="e#16268#16274#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/templates/common/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="269" selection-start-line="269" selection-end-line="269" />
-          <folding>
-            <element signature="e#2124#2129#0" expanded="true" />
-            <element signature="e#2366#2371#0" expanded="true" />
-            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -961,17 +795,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
             <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -1041,38 +875,95 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/response.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="766" selection-start-line="766" selection-end-line="767" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/cast.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="302" column="31" selection-start-line="302" selection-start-column="31" selection-end-line="302" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/jwt_middleware.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/api/v10/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="120">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/common/models.js">
+    <entry file="file://$PROJECT_DIR$/assets/statics/img/core-img/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/templates/common/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        <state relative-caret-position="420">
+          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+          <folding>
+            <element signature="e#2124#2129#0" expanded="true" />
+            <element signature="e#2366#2371#0" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="360">
+          <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/c06488a9-0304-482c-b139-8e949d2435cc.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/bef3113f-c83a-4c52-a187-dc39afa7667d.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/3c124f36-459e-4496-990f-8c53324ab567.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/86776ba3-f5c9-42b5-82d3-7a6a2371b4cc.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/7f7cfb91-4485-4993-9df6-7d311897b6fc.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/1bc543eb-c094-4a1d-90c8-124aea87acaf.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/c4353a2b-9020-4258-8d36-420fc10290ca.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/media/private/a2e356bd-194d-4cf1-b77d-d7720e53e3d7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common/models.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/common/api/v10/views.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="4" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+        <state relative-caret-position="461">
+          <caret line="124" lean-forward="true" selection-start-line="124" selection-end-line="124" />
         </state>
       </provider>
     </entry>

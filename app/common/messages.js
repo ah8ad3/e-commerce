@@ -14,7 +14,18 @@ const api_message = () => {
         sizes_required: i18n.__('Sizes is required'),
         colours_required: i18n.__('Colours is required'),
         stock_required: i18n.__('Stock is required'),
-        category_id_required: i18n.__('Category id is required')
+        category_id_required: i18n.__('Category id is required'),
+        list_needed: i18n.__('List type need for this field'),
+        images_required: i18n.__('Images is required'),
+        object_id_required: i18n.__('Object id type required'),
+        category_not_found: i18n.__('Category not found for this category id'),
+        consumer_required: i18n.__('Consumer is required'),
+        consumer_invalid_value: i18n.__('Valid values for consumer is 0, 1, 2'),
+        category_saved: i18n.__('Category saved successfully'),
+        product_saved: i18n.__('Product saved successfully'),
+        server_error: i18n.__('Server error'),
+        discount_percent_null: i18n.__('Discount is null'),
+        image_error_save: i18n.__('Error in save image')
     }
 };
 

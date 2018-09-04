@@ -22,5 +22,16 @@
 	"Sizes is required": "Sizes is required",
 	"Colours is required": "Colours is required",
 	"Stock is required": "Stock is required",
-	"Category id is required": "Category id is required"
+	"Category id is required": "Category id is required",
+	"List type need for this field": "List type need for this field",
+	"Images is required": "Images is required",
+	"Object id type required": "Object id type required",
+	"Category not found for this category id": "Category not found for this category id",
+	"Consumer is required": "Consumer is required",
+	"Valid values for consumer is 0, 1, 2": "Valid values for consumer is 0, 1, 2",
+	"Category saved successfully": "Category saved successfully",
+	"Server error": "Server error",
+	"Product saved successfully": "Product saved successfully",
+	"Discount is null": "Discount is null",
+	"Error in save image": "Error in save image"
 }

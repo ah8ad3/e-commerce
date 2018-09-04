@@ -24,7 +24,7 @@ const productSchema = mongoose.Schema({
         discount_percent: Boolean,
         creator: String     // email or username of user must be here
     },
-    image: [{data: Buffer, contentType: String}]
+    image: [String]
 });
 
 
