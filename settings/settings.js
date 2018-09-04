@@ -153,9 +153,9 @@ if (process.env.REDIS_CACHE_PORT){
 
 module.exports = {
     settings: settings,
-    secret_key: secret_key,
+    secret_key: process.env.SECRET_KEY,
     passport: passport,
     p_storage: private_storage,
-    jwt_expire: jwt_expire,
+    jwt_expire: 86400,
     cache: cache
 };

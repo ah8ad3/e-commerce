@@ -5,4 +5,6 @@ with [colorlib](https://colorlib.com)
 
 this project is under construction and will be completed as my free time
 
+we have an html template i decide to create RESTFull api for manage all information of this template, also you can use this api for an mobile application with jwt and manage it.
+
 contact `ah8ad3@gmail.com`

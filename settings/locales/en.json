@@ -15,5 +15,12 @@
 	"DB_NAME value in .env file is empty": "DB_NAME value in .env file is empty",
 	"Not Found": "Not Found",
 	"Input is not in right format": "Input is not in right format",
-	"Unauthorized request": "Unauthorized request"
+	"Unauthorized request": "Unauthorized request",
+	"Title is required": "Title is required",
+	"Price is required": "Price is required",
+	"Description is required": "Description is required",
+	"Sizes is required": "Sizes is required",
+	"Colours is required": "Colours is required",
+	"Stock is required": "Stock is required",
+	"Category id is required": "Category id is required"
 }

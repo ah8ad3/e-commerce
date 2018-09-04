@@ -13,7 +13,6 @@ const productSchema = mongoose.Schema({
         title: String,
         category: categorySchema,
         price: String,
-        is_mobile_verified: Boolean,
         create_dataTime: Date,
     },
     meta: {
@@ -23,7 +22,7 @@ const productSchema = mongoose.Schema({
         stock: Number,
         is_discount: Boolean,
         discount_percent: Boolean,
-        creator: UserModel
+        creator: String     // email or username of user must be here
     },
     image: [{data: Buffer, contentType: String}]
 });

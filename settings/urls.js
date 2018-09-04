@@ -3,11 +3,17 @@ const path = require('path');
 const commonRouter = require('../app/common/routes');
 const userRouter = require('../app/user/routes');
 
+const api_v1_common = require('../app/common/api/v10/routes');
+const api_v1_user = require('../app/user/api/v10/routes');
+
 const patty = require('../lib/patty');
 
 function urls(app, io, express){
     app.use('/', commonRouter);
     app.use('/auth', userRouter);
+
+    app.use('/api/v1.0/common', api_v1_common);
+    app.use('/api/v1.0/auth', api_v1_user);
 
     app.use('/fa', function (req, res) {
         res.cookie('locale', 'fa');
