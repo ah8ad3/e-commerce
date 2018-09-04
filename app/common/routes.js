@@ -27,6 +27,14 @@ router.get('/product', function (req, res) {
     res.render('common/single-product-details.html')
 });
 
+router.get('/checkout', function (req, res) {
+    res.render('common/checkout.html')
+});
+
+router.get('/regular', function (req, res) {
+    res.render('common/regular-page.html')
+});
+
 router.get('/download/:file_name', function (req, res) {
     let file = `${p_storage}${req.params.file_name}`;
     if (fs.existsSync(file)) {
