@@ -6,8 +6,8 @@ const userRouter = require('../app/user/routes');
 const patty = require('../lib/patty');
 
 function urls(app, io, express){
-    app.use('/common', commonRouter);
-    app.use('/', userRouter);
+    app.use('/', commonRouter);
+    app.use('/auth', userRouter);
 
     app.use('/fa', function (req, res) {
         res.cookie('locale', 'fa');

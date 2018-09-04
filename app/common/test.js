@@ -2,7 +2,7 @@ const common = (chai, server) => {
     describe('Common App', () => {
         it('should GET common index', function (done) {
             chai.request(server)
-                .get('/common')
+                .get('/')
                 .end((err, res) => {
                     res.should.have.status(200);
                     done()
@@ -10,7 +10,7 @@ const common = (chai, server) => {
         });
         it('should GET download file', function (done) {
             chai.request(server)
-                .get('/common/download/chrome.png')
+                .get('/download/chrome.png')
                 .end((err, res) => {
                     res.should.have.status(200);
                     done()
@@ -18,7 +18,7 @@ const common = (chai, server) => {
         });
         it('should GET 404 on download file', function (done) {
             chai.request(server)
-                .get('/common/download/file.pdf')
+                .get('/download/file.pdf')
                 .end((err, res) => {
                     res.should.have.status(404);
                     done()

@@ -10,7 +10,7 @@ const user = (chai, server) => {
         describe('/ GET profile page', () => {
             it('should GET profile page', function (done) {
                 chai.request(server)
-                    .get('/profile')
+                    .get('/auth/profile')
                     .end((err, res) => {
                         res.should.have.status(401);
                         done();
@@ -20,7 +20,7 @@ const user = (chai, server) => {
         describe('/ GET home page', () => {
             it('should GET homepage', function (done) {
                 chai.request(server)
-                    .get('/')
+                    .get('/auth/')
                     .end((err, res) => {
                         res.should.have.status(200);
                         done();
@@ -30,7 +30,7 @@ const user = (chai, server) => {
         describe('/GET register', () => {
             it('it should GET register page', (done) => {
                 chai.request(server)
-                    .get('/register')
+                    .get('/auth/register')
                     .end((err, res) => {
                         res.should.have.status(200);
                         // res.body.should.be.a('array');
@@ -46,7 +46,7 @@ const user = (chai, server) => {
                     password: "someCah$%26"
                 };
                 chai.request(server)
-                    .post('/register')
+                    .post('/auth/register')
                     .send(user)
                     .end((err, res) => {
                         res.should.have.status(201);
@@ -59,7 +59,7 @@ const user = (chai, server) => {
                     password: "someCah$%26"
                 };
                 chai.request(server)
-                    .post('/register')
+                    .post('/auth/register')
                     .send(user)
                     .end((err, res) => {
                         res.should.have.status(400);
@@ -72,7 +72,7 @@ const user = (chai, server) => {
                     password: ""
                 };
                 chai.request(server)
-                    .post('/register')
+                    .post('/auth/register')
                     .send(user)
                     .end((err, res) => {
                         res.should.have.status(400);
@@ -83,7 +83,7 @@ const user = (chai, server) => {
         describe('/GET login', () => {
             it('it should GET login page', (done) => {
                 chai.request(server)
-                    .get('/login')
+                    .get('/auth/login')
                     .end((err, res) => {
                         res.should.have.status(200);
                         // res.body.should.be.a('array');
@@ -99,7 +99,7 @@ const user = (chai, server) => {
                     password: "someCah$%26"
                 };
                 chai.request(server)
-                    .post('/login')
+                    .post('/auth/login')
                     .send(user)
                     .end((err, res) => {
                         res.should.have.status(400);
@@ -112,21 +112,11 @@ const user = (chai, server) => {
                     password: ""
                 };
                 chai.request(server)
-                    .post('/login')
+                    .post('/auth/login')
                     .send(user)
                     .end((err, res) => {
                         res.should.have.status(400);
                         done()
-                    });
-            });
-        });
-        describe('/GET local and google', () => {
-            it('it should GET local page', (done) => {
-                chai.request(server)
-                    .get('/connect/local')
-                    .end((err, res) => {
-                        res.should.have.status(200);
-                        done();
                     });
             });
         });
@@ -157,7 +147,7 @@ const user = (chai, server) => {
         describe('/GET 404 error', () => {
             it('it should GET local page', (done) => {
                 chai.request(server)
-                    .get('/loginn')
+                    .get('/auth/loginn')
                     .end((err, res) => {
                         res.should.have.status(404);
                         done();
@@ -168,7 +158,7 @@ const user = (chai, server) => {
         describe('/GET logout', () => {
             it('it should GET logout page', (done) => {
                 chai.request(server)
-                    .get('/logout')
+                    .get('/auth/logout')
                     .end((err, res) => {
                         res.should.have.status(200);
                         done();
