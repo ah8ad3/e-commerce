@@ -29,10 +29,21 @@ const productSchema = mongoose.Schema({
 });
 
 
+const blogSchema = mongoose.Schema({
+    title: String,
+    html: String,   // store ck-editor output here
+    creator: String,
+    introduction: String,
+    create_dataTime: Date
+});
+
+
 const ProductModel = mongoose.model('Product', productSchema);
 const CategoryModel = mongoose.model('Category', categorySchema);
+const BlogModel = mongoose.model('Blog', blogSchema);
 
 module.exports = {
     ProductModel: ProductModel,
-    CategoryModel: CategoryModel
+    CategoryModel: CategoryModel,
+    BlogModel: BlogModel
 };

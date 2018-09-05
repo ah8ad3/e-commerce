@@ -8,7 +8,7 @@ const {p_storage} = require('../../settings/settings');
 
 
 router.get('/', function(req, res) {
-    res.render('common/index.html', {test: "e-commerce"});
+    res.render('common/index.html', {title: "e-commerce"});
 });
 
 router.get('/shop', function (req, res) {
@@ -21,6 +21,10 @@ router.get('/contact', function (req, res) {
 
 router.get('/blog', function (req, res) {
     res.render('common/blog.html')
+});
+
+router.get('/blog/:id', function (req, res) {
+    res.render('common/single-blog.html')
 });
 
 router.get('/product', function (req, res) {

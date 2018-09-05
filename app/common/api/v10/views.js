@@ -4,7 +4,7 @@ const uuidv4 = require('uuid/v4');
 
 const patty = require('../../../../lib/patty');
 
-const {ProductModel, CategoryModel} = require('../../models');
+const {ProductModel, CategoryModel, BlogModel} = require('../../models');
 const {api_message} = require('../../messages');
 
 const product_post = async function (req, res, next) {
@@ -174,7 +174,66 @@ const category_delete = async function(req, res) {
     if (res_cat.creator !== user){
         res.status(403).json({permission_denied: api_message().permission_denied})
     }else {
-        res_cat.delete(function (err) {
+        res_cat.remove(function (err) {
+            if (err) {res.status(500).json({server_error: api_message().server_error}); return;}
+            res.status(204).json({success: api_message().delete_successfully})
+        })
+    }
+};
+
+const blog_post = function(req, res) {
+    let body = req.body;
+    let params = {
+        title: body.title,
+        html: body.html,
+        introduction: body.introduction,
+        creator: req.decoded.email
+    };
+
+    let errors = [];
+
+    if (!params.title) errors.push({missed: api_message().title_required});
+    if (!params.html) errors.push({missed: api_message().html_required});
+    if (!params.introduction) errors.push({missed: api_message().introduction_required});
+
+    if (errors.length > 0) {
+        res.status(400).json(errors)
+    }else {
+        let blog = new BlogModel();
+        blog.title = params.title;
+        blog.html = params.html;
+        blog.creator = params.creator;
+        blog.create_dataTime = new Date().getTime();
+        blog.introduction = params.introduction;
+
+        blog.save(function (err) {
+            if (err) {res.status(500).json({server_error: api_message().server_error}); return;}
+
+            res.status(201).json({success: api_message().blog_saved})
+        })
+    }
+};
+
+const blog_get = async function(req, res) {
+    const blog = BlogModel.find({}).select('-__v -creator');
+    let res_blog = await blog.exec();
+
+    res.json(res_blog);
+};
+
+const blog_delete = async function(req, res) {
+    let id = req.body.id;
+    let user = req.decoded.email;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {res.status(400).json({id: api_message().object_id_required}); return;}
+    let blog = BlogModel.findOne({_id: id});
+    let res_blog = await blog.exec();
+
+    if (res_blog === null) {res.status(404).json({not_found: api_message().blog_not_found}); return}
+    if (res_blog.creator !== user){
+        res.status(403).json({permission_denied: api_message().permission_denied})
+    }else {
+        res_blog.remove(function (err) {
             if (err) {res.status(500).json({server_error: api_message().server_error}); return;}
             res.status(204).json({success: api_message().delete_successfully})
         })
@@ -187,5 +246,8 @@ module.exports = {
     product_get: product_get,
     category_get: category_get,
     category_delete: category_delete,
-    product_delete: product_delete
+    product_delete: product_delete,
+    blog_post: blog_post,
+    blog_get: blog_get,
+    blog_delete: blog_delete
 };

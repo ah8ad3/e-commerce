@@ -24,11 +24,15 @@ const api_message = () => {
         consumer_invalid_value: i18n.__('Valid values for consumer is 0, 1, 2'),
         category_saved: i18n.__('Category saved successfully'),
         product_saved: i18n.__('Product saved successfully'),
+        blog_saved: i18n.__('Blog saved successfully'),
         server_error: i18n.__('Server error'),
         discount_percent_null: i18n.__('Discount is null'),
         image_error_save: i18n.__('Error in save image'),
         permission_denied: i18n.__('Permission denied'),
-        delete_successfully: i18n.__('Deleted successfully')
+        delete_successfully: i18n.__('Deleted successfully'),
+        html_required: i18n.__('Html is required'),
+        introduction_required: i18n.__('Introduction is required'),
+        blog_not_found: i18n.__('Blog not found')
     }
 };
 
