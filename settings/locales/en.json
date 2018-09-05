@@ -33,5 +33,9 @@
 	"Server error": "Server error",
 	"Product saved successfully": "Product saved successfully",
 	"Discount is null": "Discount is null",
-	"Error in save image": "Error in save image"
+	"Error in save image": "Error in save image",
+	"Permission denied": "Permission denied",
+	"Deleted successfully": "Deleted successfully",
+	"Category not found for this id": "Category not found for this id",
+	"Product not found for this id": "Product not found for this id"
 }

@@ -1,10 +1,13 @@
+const fs = require('fs');
 const mongoose = require('mongoose');
 const uuidv4 = require('uuid/v4');
+
+const patty = require('../../../../lib/patty');
 
 const {ProductModel, CategoryModel} = require('../../models');
 const {api_message} = require('../../messages');
 
-const product_post = async function (req, res) {
+const product_post = async function (req, res, next) {
     let body = req.body;
     let params = {
         title: body.title,
@@ -35,15 +38,15 @@ const product_post = async function (req, res) {
         res.status(400).json(errors);
     } else {
         // data type validation
-        if (params.is_discount) if (params.discount_percent === null) res.status(400).json({discount_percent: api_message().discount_percent_null});
-        if (typeof params.sizes !== "object") res.status(400).json({sizes: api_message().list_needed});
-        if (typeof params.colours !== "object") res.status(400).json({colours: api_message().list_needed});
-        if (typeof params.images !== "object") res.status(400).json({images: api_message().list_needed});
-        if (!mongoose.Types.ObjectId.isValid(params.category_id)) res.status(400).json({category_id: api_message().object_id_required});
+        if (params.is_discount){ if (params.discount_percent === null) res.status(400).json({discount_percent: api_message().discount_percent_null}); return;}
+        if (typeof params.sizes !== "object") {res.status(400).json({sizes: api_message().list_needed}); return;}
+        if (typeof params.colours !== "object") {res.status(400).json({colours: api_message().list_needed}); return;}
+        if (typeof params.images !== "object") {res.status(400).json({images: api_message().list_needed}); return;}
+        if (!mongoose.Types.ObjectId.isValid(params.category_id)) {res.status(400).json({category_id: api_message().object_id_required}); return;}
 
         const category = CategoryModel.findOne({_id: params.category_id});
         let res_category = await category.exec();
-        if (res_category === null) res.status(400).json({category_id: api_message().category_not_found});
+        if (res_category === null) {res.status(404).json({category_id: api_message().category_not_found}); return;}
 
         let product = new ProductModel();
 
@@ -68,7 +71,7 @@ const product_post = async function (req, res) {
         for (let i = 0; i < params.images.length; i++){
             let base64Data = params.images[i].replace(/^data:image\/png;base64,/, "");
             let image_name = uuidv4();
-            require("fs").writeFile(`assets/media/private/${image_name}.jpg`, base64Data, 'base64', function(err) {
+            fs.writeFile(`assets/media/private/${image_name}.jpg`, base64Data, 'base64', function(err) {
                 if (err) res.status(400).json({images: api_message().image_error_save});
             });
             images.push(`${image_name}.jpg`)
@@ -86,11 +89,45 @@ const product_post = async function (req, res) {
     }
 };
 
+const product_get = async function(req, res) {
+    const products = ProductModel.find({}).select('-meta.creator -__v -info.category.__v -info.category.creator');
+    let res_product = await products.exec();
+
+    res.json(res_product);
+};
+
+const product_delete = async function (req, res) {
+    let id = req.body.id;
+    let user = req.decoded.email;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {res.status(400).json({id: api_message().object_id_required}); return;}
+    let pro = ProductModel.findOne({_id: id});
+    let res_pro = await pro.exec();
+
+    if (res_pro === null) {res.status(404).json({not_found: api_message().product_not_found}); return}
+    if (res_pro.meta.creator !== user){
+        res.status(403).json({permission_denied: api_message().permission_denied})
+    }else {
+        res_pro.remove(function (err) {
+            if (err) {res.status(500).json({server_error: api_message().server_error}); return;}
+            for (let i = 0; i < res_pro.image.length; i++) {
+                try{
+                    fs.unlinkSync(`assets/media/private/${res_pro.image[i]}`)
+                }catch (e) {
+                    patty.log.danger('warning: in delete product by api v1.0, have an error on removing images')
+                }
+            }
+            res.status(204).json({success: api_message().delete_successfully})
+        })
+    }
+};
+
 const category_post = function(req, res) {
     let body = req.body;
     let params = {
         title: body.title,
-        consumer: body.consumer    // 0 for women  1 for men  2 for kids
+        consumer: body.consumer,    // 0 for women  1 for men  2 for kids
+        creator: req.decoded.email
     };
 
     let errors = [];
@@ -104,6 +141,7 @@ const category_post = function(req, res) {
             let cat = new CategoryModel();
             cat.title = params.title;
             cat.consumer = params.consumer;
+            cat.creator = params.creator;
             cat.save(function (err) {
                 if (err){
                     res.status(400).json({error: api_message().server_error})
@@ -117,8 +155,37 @@ const category_post = function(req, res) {
     }
 };
 
+const category_get = async function(req, res) {
+    const categories = CategoryModel.find({}).select('-__v -creator');
+    let res_category = await categories.exec();
+
+    res.json(res_category);
+};
+
+const category_delete = async function(req, res) {
+    let id = req.body.id;
+    let user = req.decoded.email;
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {res.status(400).json({id: api_message().object_id_required}); return;}
+    let cat = CategoryModel.findOne({_id: id});
+    let res_cat = await cat.exec();
+
+    if (res_cat === null) {res.status(404).json({not_found: api_message().category_not_found}); return}
+    if (res_cat.creator !== user){
+        res.status(403).json({permission_denied: api_message().permission_denied})
+    }else {
+        res_cat.delete(function (err) {
+            if (err) {res.status(500).json({server_error: api_message().server_error}); return;}
+            res.status(204).json({success: api_message().delete_successfully})
+        })
+    }
+};
 
 module.exports = {
     product_post: product_post,
-    category_post: category_post
+    category_post: category_post,
+    product_get: product_get,
+    category_get: category_get,
+    category_delete: category_delete,
+    product_delete: product_delete
 };

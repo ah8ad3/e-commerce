@@ -4,7 +4,8 @@ const {UserModel} = require('../user/models');
 
 const categorySchema = mongoose.Schema({
     title: String,
-    consumer: Number   // 0 for women   1 for men   2 for kids
+    consumer: Number,   // 0 for women   1 for men   2 for kids
+    creator: String
 });
 
 

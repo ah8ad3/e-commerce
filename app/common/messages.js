@@ -18,14 +18,17 @@ const api_message = () => {
         list_needed: i18n.__('List type need for this field'),
         images_required: i18n.__('Images is required'),
         object_id_required: i18n.__('Object id type required'),
-        category_not_found: i18n.__('Category not found for this category id'),
+        category_not_found: i18n.__('Category not found for this id'),
+        product_not_found: i18n.__('Product not found for this id'),
         consumer_required: i18n.__('Consumer is required'),
         consumer_invalid_value: i18n.__('Valid values for consumer is 0, 1, 2'),
         category_saved: i18n.__('Category saved successfully'),
         product_saved: i18n.__('Product saved successfully'),
         server_error: i18n.__('Server error'),
         discount_percent_null: i18n.__('Discount is null'),
-        image_error_save: i18n.__('Error in save image')
+        image_error_save: i18n.__('Error in save image'),
+        permission_denied: i18n.__('Permission denied'),
+        delete_successfully: i18n.__('Deleted successfully')
     }
 };
 
