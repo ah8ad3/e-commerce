@@ -8,7 +8,7 @@ const {p_storage} = require('../../settings/settings');
 
 
 router.get('/', function(req, res) {
-    res.render('common/index.html');
+    res.render('common/index.html', {test: "e-commerce"});
 });
 
 router.get('/shop', function (req, res) {
