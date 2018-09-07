@@ -3,12 +3,16 @@ const fs = require('fs');
 const express = require('express');
 const router = express.Router();
 
+const {ProductModel} = require('./models');
 const {message} = require('./messages');
 const {p_storage} = require('../../settings/settings');
 
 
-router.get('/', function(req, res) {
-    res.render('common/index.html', {title: "e-commerce"});
+router.get('/', async function(req, res) {
+    const products = ProductModel.find({}).select('-meta.creator -__v -info.category.__v -info.category.creator');
+    let res_product = await products.exec();
+
+    res.render('common/index.html', {title: "e-commerce", products: res_product});
 });
 
 router.get('/shop', function (req, res) {

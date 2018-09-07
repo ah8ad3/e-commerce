@@ -37,5 +37,9 @@
 	"Permission denied": "Permission denied",
 	"Deleted successfully": "Deleted successfully",
 	"Category not found for this id": "Category not found for this id",
-	"Product not found for this id": "Product not found for this id"
+	"Product not found for this id": "Product not found for this id",
+	"Blog saved successfully": "Blog saved successfully",
+	"Html is required": "Html is required",
+	"Introduction is required": "Introduction is required",
+	"Blog not found": "Blog not found"
 }
