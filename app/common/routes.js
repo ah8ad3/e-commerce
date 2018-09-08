@@ -3,16 +3,23 @@ const fs = require('fs');
 const express = require('express');
 const router = express.Router();
 
-const {ProductModel} = require('./models');
+const {ProductModel, CategoryModel} = require('./models');
 const {message} = require('./messages');
 const {p_storage} = require('../../settings/settings');
 
 
 router.get('/', async function(req, res) {
-    const products = ProductModel.find({}).select('-meta.creator -__v -info.category.__v -info.category.creator');
+    const products = ProductModel.find({}).select('-meta.creator -__v -ifo.category.__v -info.category.creator');
+    const  w_cat = CategoryModel.find({consumer: 0}).select('-__v -creator');  // women
+    const  m_cat = CategoryModel.find({consumer: 1}).select('-__v -creator');  // men
+    const  k_cat = CategoryModel.find({consumer: 2}).select('-__v -creator');  // kid
+
+    let res_cat_w = await w_cat.exec();
+    let res_cat_m = await m_cat.exec();
+    let res_cat_k = await k_cat.exec();
     let res_product = await products.exec();
 
-    res.render('common/index.html', {title: "e-commerce", products: res_product});
+    res.render('common/index.html', {title: "e-commerce", products: res_product, cat_w: res_cat_w, cat_m: res_cat_m, cat_k: res_cat_k});
 });
 
 router.get('/shop', function (req, res) {
