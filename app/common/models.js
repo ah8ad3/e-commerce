@@ -22,7 +22,8 @@ const productSchema = mongoose.Schema({
         colours: [String],
         stock: Number,
         is_discount: Boolean,
-        discount_percent: Boolean,
+        discount_percent: Number,
+        discount_price: String,
         creator: String     // email or username of user must be here
     },
     image: [String]

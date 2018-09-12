@@ -22,6 +22,15 @@ router.get('/', async function(req, res) {
     res.render('common/index.html', {title: "e-commerce", products: res_product, cat_w: res_cat_w, cat_m: res_cat_m, cat_k: res_cat_k});
 });
 
+router.post('/search', async function(req, res) {
+    const search = req.body.search;
+    const product = ProductModel.find({'info.title': search}).select('-__v -meta.creator -info.category.creator');
+
+    let products = await product.exec();
+
+    res.render('common/shop.html', {products: products, length: products.length})
+});
+
 router.get('/shop', function (req, res) {
     res.render('common/shop.html')
 });

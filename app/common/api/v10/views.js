@@ -38,7 +38,12 @@ const product_post = async function (req, res, next) {
         res.status(400).json(errors);
     } else {
         // data type validation
-        if (params.is_discount){ if (params.discount_percent === null) res.status(400).json({discount_percent: api_message().discount_percent_null}); return;}
+        if (params.is_discount){
+            if (params.discount_percent === null) {
+                res.status(400).json({discount_percent: api_message().discount_percent_null});
+                return;
+            }
+        }
         if (typeof params.sizes !== "object") {res.status(400).json({sizes: api_message().list_needed}); return;}
         if (typeof params.colours !== "object") {res.status(400).json({colours: api_message().list_needed}); return;}
         if (typeof params.images !== "object") {res.status(400).json({images: api_message().list_needed}); return;}
@@ -63,6 +68,7 @@ const product_post = async function (req, res, next) {
         if (params.is_discount) {
             product.meta.is_discount = params.is_discount;
             product.meta.discount_percent = params.discount_percent;
+            product.meta.discount_price = parseInt(parseInt(params.price) - ((parseInt(params.price) * params.discount_percent) / 100));
         }else {
             product.meta.is_discount = false
         }
