@@ -193,7 +193,8 @@ const blog_post = function(req, res) {
         title: body.title,
         html: body.html,
         introduction: body.introduction,
-        creator: req.decoded.email
+        creator: req.decoded.email,
+        image: body.image
     };
 
     let errors = [];
@@ -211,6 +212,15 @@ const blog_post = function(req, res) {
         blog.creator = params.creator;
         blog.create_dataTime = new Date().getTime();
         blog.introduction = params.introduction;
+
+        if (params.image) {
+            let base64Data = params.image.replace(/^data:image\/png;base64,/, "");
+            let image_name = uuidv4();
+            fs.writeFile(`assets/media/private/${image_name}.jpg`, base64Data, 'base64', function(err) {
+                if (err) {res.status(400).json({images: api_message().image_error_save}); return;}
+                blog.image = `assets/media/private/${image_name}.jpg`
+            });
+        }
 
         blog.save(function (err) {
             if (err) {res.status(500).json({server_error: api_message().server_error}); return;}

@@ -35,7 +35,8 @@ const blogSchema = mongoose.Schema({
     html: String,   // store ck-editor output here
     creator: String,
     introduction: String,
-    create_dataTime: Date
+    create_dataTime: Date,
+    image: String
 });
 
 
